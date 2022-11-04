@@ -1,20 +1,22 @@
-import {View, Text, Button, SafeAreaView} from 'react-native';
-import React from 'react';
+import {View, Text, Button, SafeAreaView, FlatList} from 'react-native';
+import React, {useState} from 'react';
 import axios from 'axios';
+import Card from './components/Card';
 
 const App = () => {
+  const [userList, setUserList] = useState([]);
   async function getData() {
     const response = await axios.get(
-      //'https://ackapa20200827205202.azurewebsites.net/categories',
       'https://jsonplaceholder.typicode.com/users',
     );
-    console.log(response);
+    setUserList(response.data);
   }
-
+  const renderItem = ({item}) => <Card cards={item} />;
   return (
     <SafeAreaView>
       <View>
         <Text>App</Text>
+        <FlatList data={userList} renderItem={renderItem} />
         <Button title="GetData" onPress={getData} />
       </View>
     </SafeAreaView>
