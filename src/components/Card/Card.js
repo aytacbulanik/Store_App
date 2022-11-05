@@ -1,25 +1,13 @@
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text } from 'react-native';
 import React from 'react';
+import styles from './Card.Style';
 
 const Card = ({cards}) => {
   return (
     <View style={styles.container}>
-      <View>
-        <Text>{cards.username}</Text>
-      </View>
-      <View>
-        <Text>{cards.email}</Text>
-        <Text>{cards.address.city}</Text>
-      </View>
+      <Text> Deneme</Text>
     </View>
   );
 };
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: 'lightgray',
-    margin: 8,
-    padding: 5,
-    borderRadius: 10,
-  },
-});
+
 export default Card;
