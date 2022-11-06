@@ -4,7 +4,7 @@ import Card from './components/Card';
 import dataArray from './data.json';
 
 const App = () => {
-  const renderItem = ({item}) => <Card data={item} />;
+  const renderItem = ({item}) => <Card product={item} />;
 
   return (
     <SafeAreaView>
