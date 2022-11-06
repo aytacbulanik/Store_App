@@ -1,17 +1,16 @@
-import {
-  View,
-  SafeAreaView,
-} from 'react-native';
+import {View, SafeAreaView, FlatList, Text} from 'react-native';
 import React from 'react';
 import Card from './components/Card';
-
+import dataArray from './data.json';
 
 const App = () => {
+  const renderItem = ({item}) => <Card data={item} />;
 
   return (
     <SafeAreaView>
       <View>
-        <Card />
+        <Text> Hızla Store</Text>
+        <FlatList data={dataArray} renderItem={renderItem} />
       </View>
     </SafeAreaView>
   );
