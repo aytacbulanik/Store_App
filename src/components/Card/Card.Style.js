@@ -4,8 +4,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: 'lightgray',
     margin: 5,
-    padding: 5,
-    borderRadius: 8,
+    borderRadius: 10,
     width: (Dimensions.get('window').width - 20) / 2,
   },
   large_title: {
@@ -14,12 +13,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   image: {
-    width: (Dimensions.get('window').width - 60) / 2,
-    height: 150,
+    height: Dimensions.get('window').height / 4,
   },
   image_view_container: {
     backgroundColor: 'white',
-    height: 200,
     borderRadius: 10,
     justifyContent: 'center',
     margin: 5,
@@ -37,6 +34,13 @@ const styles = StyleSheet.create({
     color: 'red',
     fontSize: 17,
     fontWeight: '600',
+  },
+  text_input: {
+    backgroundColor: 'lightgray',
+    height: 40,
+    borderRadius: 8,
+    margin: 5,
+    padding: 5,
   },
 });
 
